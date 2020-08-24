@@ -1,0 +1,12 @@
+.text {
+  &--code {
+    &:before {
+      content: '<';
+      margin-right: 3px;
+    }
+    &:after {
+      content: '/>';
+      margin-left: 3px;
+    }
+  }
+}

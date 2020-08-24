@@ -1,0 +1,21 @@
+$fonts: (
+  'lato': 'Lato',
+  'roboto': 'Roboto Condensed',
+);
+
+$theme: (
+  'primary': #0dfdd9,
+  'secondary': #fc0852,
+  'dark-grey': #1d1d1d,
+  'dark': #191919,
+  'white': #ffffff,
+);
+
+:root {
+  @each $class, $color in $theme {
+    --#{$class}: #{$color};
+  }
+  @each $class, $font in $fonts {
+    --#{$class}-font: #{$font};
+  }
+}

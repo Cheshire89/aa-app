@@ -1,0 +1,26 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--dark-grey);
+  box-shadow: 0px 7px 7px 5px var(--dark);
+
+  // &__brand {
+  // }
+  &__nav {
+    list-style: none;
+  }
+  &__item {
+    display: inline-block;
+    margin: 0px 0.5em;
+  }
+  &__link {
+    position: relative;
+    font-family: var(--roboto-font);
+    font-weight: 700;
+    font-size: 1.5em;
+    color: var(--primary);
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,44 @@
+@mixin set-circle-size($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin init-circle($size) {
+  position: absolute;
+  @include set-circle-size(($size));
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 100% 100%;
+  pointer-events: none;
+}
+
+.cursor {
+  @include init-circle(0.35rem);
+  background-color: var(--white);
+  pointer-events: none;
+  opacity: 1;
+
+  &--down {
+    @include set-circle-size(0.55rem);
+  }
+
+  &--hide {
+    opacity: 0;
+  }
+
+  &__outline {
+    @include init-circle(1.5rem);
+    border: 1px solid var(--white);
+    transition: all 0.1s linear;
+
+    &--down {
+      @include set-circle-size(0.65rem);
+    }
+
+    &--grow {
+      transform: scale(2);
+      z-index: 1;
+      backdrop-filter: invert(100%) brightness(200%);
+    }
+  }
+}

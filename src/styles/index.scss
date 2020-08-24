@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'fonts';
+@import 'vars';
+@import 'components/index';
+
+body {
+  position: relative;
+}
+* {
+  cursor: none !important;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+// a {
+//   -webkit-background-clip: text;
+//   background-clip: text;
+//   filter: invert(1);
+// }
