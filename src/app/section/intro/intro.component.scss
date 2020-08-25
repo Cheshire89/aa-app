@@ -1,6 +1,4 @@
-// :host {
-
-// }
+@import '../../../styles/vars';
 
 .bg {
   position: fixed;
@@ -9,7 +7,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   display: block;
-  min-height: calc(100vh - 68px);
+  min-height: calc(100vh - #{$nav-height} );
   width: 100%;
   filter: grayscale(1) brightness(150%);
   z-index: 0;
@@ -22,7 +20,7 @@
   font-weight: 900;
   display: flex;
   align-items: center;
-  min-height: calc(100vh - 68px);
+  min-height: calc(100vh - #{$nav-height} );
   padding: 0px 20%;
   font-size: 2em;
   z-index: 1;

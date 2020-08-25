@@ -1,6 +1,7 @@
+@import '../../../styles/vars';
 :host {
   display: block;
-  min-height: calc(100vh - 68px);
+  min-height: calc(100vh - #{$nav-height});
   width: 100%;
   background-color: var(--dark-grey);
 }

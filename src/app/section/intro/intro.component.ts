@@ -16,10 +16,12 @@ export class IntroComponent implements OnInit {
 
   ngOnInit() {
     this.onScramble();
-    setInterval(() => {
-      if (!this.animationFinished) {
-        this.onScramble();
-      }
+    setTimeout(() => {
+      setInterval(() => {
+        if (!this.animationFinished) {
+          this.onScramble();
+        }
+      }, 3000);
     }, 3000);
   }
 

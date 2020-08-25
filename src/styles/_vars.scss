@@ -11,6 +11,8 @@ $theme: (
   'white': #ffffff,
 );
 
+$nav-height: 88px;
+
 :root {
   @each $class, $color in $theme {
     --#{$class}: #{$color};
