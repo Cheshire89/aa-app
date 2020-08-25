@@ -1,22 +1,18 @@
-import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from "@angular/router";
-import { MainComponent } from "./layout/main/main.component";
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { MainComponent } from './layout/main/main.component';
+import { IntroComponent } from './section/intro/intro.component';
 
 const routes: Routes = [
   {
-    path: "",
+    path: '',
     component: MainComponent,
     children: [
       // { path: '', pathMatch: 'full', redirectTo },
-      // {
-      //   path: '',
-      //   component: FaxActivityComponent,
-      //   canActivate: [AuthGuard, RoleGuard],
-      //   children: [{ path: ':id', component: FaxPreviewComponent }],
-      //   data: {
-      //     expectedRoles: ['user', 'admin'],
-      //   },
-      // },
+      {
+        path: '',
+        component: IntroComponent,
+      },
     ],
   },
 ];

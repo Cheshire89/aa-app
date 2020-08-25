@@ -2,10 +2,12 @@
   &--code {
     &:before {
       content: '<';
+      color: var(--white);
       margin-right: 3px;
     }
     &:after {
       content: '/>';
+      color: var(--white);
       margin-left: 3px;
     }
   }

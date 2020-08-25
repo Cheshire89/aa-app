@@ -6,8 +6,18 @@
   background-color: var(--dark-grey);
   box-shadow: 0px 7px 7px 5px var(--dark);
 
-  // &__brand {
-  // }
+  &__brand {
+    font-size: 48px;
+    font-weight: 900;
+    font-family: var(--lato-font);
+    text-decoration: none;
+    color: var(--primary);
+    text-shadow: 2px 2px var(--primary);
+    span {
+      color: var(--secondary);
+      text-shadow: 2px 2px var(--secondary);
+    }
+  }
   &__nav {
     list-style: none;
   }
