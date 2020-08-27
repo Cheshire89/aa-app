@@ -1,14 +1,17 @@
 .text {
   &--code {
+    // background-clip: none;
     &:before {
       content: '<';
       color: var(--white);
       margin-right: 3px;
+      -webkit-text-fill-color: #fff;
     }
     &:after {
       content: '/>';
       color: var(--white);
       margin-left: 3px;
+      -webkit-text-fill-color: #fff;
     }
   }
 }

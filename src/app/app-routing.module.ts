@@ -8,7 +8,6 @@ const routes: Routes = [
     path: '',
     component: MainComponent,
     children: [
-      // { path: '', pathMatch: 'full', redirectTo },
       {
         path: '',
         component: IntroComponent,

@@ -1,0 +1,5 @@
+@mixin linear-gradient-text($from, $to) {
+  background: linear-gradient(to right, $from, $to);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
