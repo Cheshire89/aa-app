@@ -6,6 +6,10 @@ const education = require('../data/education');
 const jobs = require('../data/jobs');
 const skills = require('../data/skills');
 
+const Education = require('./models/education');
+const Job = require('./models/job');
+const Skill = require('./models/skill');
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -17,7 +21,9 @@ app.use((req, res, next) => {
 });
 
 app.post('/api/education', (req, res, next) => {
-  const post = req.body;
+  const ed = new Education({
+    ...req.body,
+  });
   console.log('post', post);
   res.status(201).json(post);
 });

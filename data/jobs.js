@@ -1,4 +1,4 @@
-const job = { id: 0, startYear: 2020, endYear: 'now', title: 'Software Engineer', company: 'Voyant' };
+const job = { id: 0,  };
 
 const jobs = Array(10).fill(job);
 
