@@ -7,10 +7,11 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
 import { MainComponent } from './layout/main/main.component';
 import { CursorComponent } from './layout/cursor/cursor.component';
 import { SectionModule } from './section/section.module';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent, MainComponent, CursorComponent],
-  imports: [BrowserModule, AppRoutingModule, SectionModule],
+  imports: [BrowserModule, AppRoutingModule, AuthModule, SectionModule],
   providers: [],
   bootstrap: [AppComponent],
 })

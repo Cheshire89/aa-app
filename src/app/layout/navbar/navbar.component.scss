@@ -1,20 +1,16 @@
 @import '../../../styles/mixins';
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
+.nav {
   background-color: var(--dark);
   box-shadow: 0px 7px 7px 5px var(--dark);
   user-select: none;
 
-  &__brand {
+  &__logo {
+    @include linear-gradient-text(var(--primary), var(--third));
     font-size: 48px;
     line-height: 48px;
     font-weight: 900;
     font-family: var(--lato-font);
     color: var(--secondary);
-    @include linear-gradient-text(var(--primary), var(--third));
     text-decoration: none;
 
     letter-spacing: -20px;
@@ -22,17 +18,11 @@
     display: inline-block;
     padding: 0px 5px;
     span {
-      color: var(--secondary);
       @include linear-gradient-text(var(--primary), var(--secondary));
+      color: var(--secondary);
     }
   }
-  &__nav {
-    list-style: none;
-  }
-  &__item {
-    display: inline-block;
-    margin: 0px 0.5em;
-  }
+
   &__link {
     position: relative;
     font-family: var(--roboto-font);

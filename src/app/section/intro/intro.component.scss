@@ -17,41 +17,38 @@
 .intro {
   position: relative;
   color: var(--white);
-  font-family: var(--roboto-font);
-  font-weight: 900;
-  display: flex;
-  align-items: center;
+  font-family: var(--lato-font);
   min-height: calc(100vh - #{$nav-height});
-  padding: 0px 20%;
   font-size: 2em;
   z-index: 1;
   &__name {
     color: var(--primary);
-    // @include linear-gradient-text(var(--third), var(--primary));
+    @include linear-gradient-text(var(--third), var(--primary));
   }
-  &__skill {
-    position: relative;
-    &:before {
-      content: '';
-      position: absolute;
-      height: 0.5em;
-      width: 100%;
-      padding-left: 5px;
-      top: 65%;
-      left: 0px;
-      background-color: var(--secondary);
-      z-index: -1;
-    }
-  }
-  h2 {
+
+  &__text {
+    font-weight: 700;
+    font-size: 1.5em;
     line-height: 1.5em;
-    font-family: var(--lato-font);
-    span {
-      font-family: Roboto Mono, Courier New, Courier, monospace !important;
+    i {
+      font-family: Palatino, Georgia, Times New Roman, Times, serif;
+      font-weight: 300;
+    }
+
+    span:not(.intro__name) {
+      font-family: 'Courier New', Courier, monospace;
+      letter-spacing: 0.5px;
     }
   }
-  i {
-    font-family: Palatino, Georgia, Times New Roman, Times, serif;
-    font-weight: 300;
-  }
+  // h2 {
+  //   line-height: 1.5em;
+  //   font-family: var(--lato-font);
+  //   span {
+  //     font-family: Roboto Mono, Courier New, Courier, monospace !important;
+  //   }
+  // }
+  // i {
+  //   font-family: Palatino, Georgia, Times New Roman, Times, serif;
+  //   font-weight: 300;
+  // }
 }

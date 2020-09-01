@@ -1,0 +1,18 @@
+.intro {
+  &__skill {
+    position: relative;
+    width: 100%;
+
+    &:before {
+      content: '';
+      position: absolute;
+      height: 0.5em;
+      width: 100%;
+      padding-left: 5px;
+      top: 65%;
+      left: 5px;
+      background-color: var(--secondary);
+      z-index: -1;
+    }
+  }
+}

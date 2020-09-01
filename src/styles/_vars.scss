@@ -12,7 +12,7 @@ $theme: (
   'white': #ffffff,
 );
 
-$nav-height: 88px;
+$nav-height: 68px;
 
 :root {
   @each $class, $color in $theme {
