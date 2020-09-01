@@ -1,0 +1,23 @@
+@import '../../../styles/mixins';
+
+.layout {
+  &__logo {
+    @include linear-gradient-text(var(--primary), var(--third));
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 900;
+    font-family: var(--lato-font);
+    color: var(--secondary);
+    text-decoration: none;
+
+    letter-spacing: -20px;
+    min-width: 72px;
+    display: inline-block;
+    padding: 0px 5px;
+    user-select: none;
+    span {
+      @include linear-gradient-text(var(--primary), var(--secondary));
+      color: var(--secondary);
+    }
+  }
+}

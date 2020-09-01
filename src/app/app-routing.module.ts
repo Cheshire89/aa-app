@@ -13,11 +13,11 @@ const routes: Routes = [
         path: '',
         component: IntroComponent,
       },
-      {
-        path: 'signin',
-        component: SigninComponent,
-      },
     ],
+  },
+  {
+    path: 'signin',
+    component: SigninComponent,
   },
 ];
 
