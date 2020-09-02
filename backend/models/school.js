@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 
-const educationSchema = mongoose.Schema({
+const schoolSchema = mongoose.Schema({
   start: {
-    type: Date,
+    type: String,
     required: true,
   },
   end: {
-    type: Date,
+    type: String,
     required: true,
   },
   degree: {
@@ -19,4 +19,4 @@ const educationSchema = mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model('Education', educationSchema);
+module.exports = mongoose.model('School', schoolSchema);
