@@ -8,12 +8,12 @@ const routes: Routes = [
   {
     path: '',
     component: MainComponent,
-    children: [
-      {
-        path: '',
-        component: IntroComponent,
-      },
-    ],
+    // children: [
+    //   {
+    //     path: '',
+    //     component: IntroComponent,
+    //   },
+    // ],
   },
   {
     path: 'signin',

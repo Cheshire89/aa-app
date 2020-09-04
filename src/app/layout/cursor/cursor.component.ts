@@ -55,6 +55,7 @@ export class CursorComponent implements OnInit {
     this.cursorOutline = this.ele.nativeElement.children[1];
     this.links = document.querySelectorAll('a');
 
+    // move to route change event after component is loaded
     this.links.forEach((link: HTMLAnchorElement) => {
       link.addEventListener('mouseleave', () => {
         this.cursor.classList.remove('cursor--hide');

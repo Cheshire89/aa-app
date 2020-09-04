@@ -17,3 +17,119 @@ body {
     color: var(--white);
   }
 }
+
+%input {
+  border-radius: 2px;
+  background-color: var(--dark) !important;
+  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.09);
+  border: 1px solid #25aae1;
+  color: #25aae1;
+  transition: all 0.1s ease-in-out;
+
+  .fas {
+    @include clip-to-text;
+    background-image: map-get($gradients, 'blue');
+    transition: all 0.1s ease-in-out;
+  }
+}
+
+.form {
+  &__container--xy-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  &__input-group {
+    &-prepend {
+      > span {
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        @extend %input;
+        border-right: 0px;
+      }
+    }
+
+    .form {
+      &__control,
+      &__control:-webkit-autofill {
+        @extend %input;
+        @include placeholder {
+          color: #25aae1;
+        }
+        border-left: 0px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+      }
+    }
+  }
+
+  &__submit {
+    color: #fff;
+    border: none;
+    background-size: 300% 100%;
+    transition: all 0.2s ease-in-out;
+    background-image: var(--blue-grd);
+
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: var(--lato-font);
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:active:focus {
+      outline: none;
+      background-position: 100% 0;
+      box-shadow: none;
+      // transition: all 0.4s ease-in-out;
+    }
+  }
+
+  &__group {
+    &--has-error {
+      .form {
+        &__input-group-prepend {
+          > span {
+            border-color: var(--secondary);
+          }
+          .fas {
+            background-image: var(--red-grd);
+          }
+        }
+        &__control,
+        &__control:-webkit-autofill {
+          @include placeholder {
+            color: var(--secondary);
+          }
+          border-color: var(--secondary);
+          color: var(--secondary);
+        }
+      }
+    }
+
+    &--active {
+      .form {
+        &__input-group-prepend {
+          > span {
+            border-color: var(--primary);
+          }
+          .fas {
+            background-image: var(--green-grd);
+          }
+        }
+        &__control,
+        &__control:-webkit-autofill {
+          @include placeholder {
+            color: var(--primary);
+          }
+          border-color: var(--primary);
+          color: var(--primary);
+        }
+      }
+    }
+  }
+}

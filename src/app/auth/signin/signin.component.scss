@@ -1,25 +1,7 @@
-.bg {
-  position: fixed;
-  background-image: url(https://yasio.pl/assets/img/a5d79c8.webp);
-  background-position: 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: block;
-  min-height: calc(100vh);
-  width: 100%;
-  filter: grayscale(1) brightness(150%);
-  z-index: 0;
-}
+@import '../../../styles/vars';
+@import '../../../styles/mixins';
 
 .container-fluid {
+  @include bg(100vh);
   min-height: calc(100vh);
-}
-
-.form {
-  &__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
 }

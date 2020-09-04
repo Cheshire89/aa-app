@@ -1,0 +1,48 @@
+.content {
+  position: relative;
+  &__timeline {
+    width: 1px;
+    height: 300%;
+    left: -10px;
+    top: -24px;
+    z-index: 9;
+    position: absolute;
+    background-color: var(--third);
+    &--alt {
+      top: 0;
+      height: 100vh;
+    }
+  }
+
+  &__bullet {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      left: -4px;
+      top: 0;
+      z-index: 10;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      border: 2px solid var(--third);
+      background-color: var(--dark);
+    }
+
+    &--alt {
+      top: 48px;
+    }
+  }
+
+  &__section-label {
+    position: relative;
+    &:before {
+      content: attr(data-label);
+      position: absolute;
+      left: 12px;
+      top: -12px;
+      width: auto;
+      font-size: 20px;
+    }
+  }
+}

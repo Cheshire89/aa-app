@@ -10,7 +10,7 @@
   transform: translate(-50%, -50%);
   transform-origin: 100% 100%;
   pointer-events: none;
-  z-index: 2;
+  z-index: 1002;
 }
 
 .cursor {
@@ -38,7 +38,7 @@
 
     &--grow {
       transform: scale(2);
-      z-index: 1;
+      z-index: 1001;
       backdrop-filter: hue-rotate(90deg) saturate(500%);
     }
   }

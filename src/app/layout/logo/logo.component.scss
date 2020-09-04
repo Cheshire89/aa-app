@@ -10,14 +10,17 @@
     color: var(--secondary);
     text-decoration: none;
 
-    letter-spacing: -20px;
-    min-width: 72px;
     display: inline-block;
     padding: 0px 5px;
     user-select: none;
+    position: relative;
     span {
       @include linear-gradient-text(var(--primary), var(--secondary));
       color: var(--secondary);
+      position: absolute;
+      top: 0px;
+      left: 50%;
+      // transform: translate(-50%);
     }
   }
 }

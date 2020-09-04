@@ -1,26 +1,14 @@
 @import '../../../styles/vars';
 @import '../../../styles/mixins';
 
-.bg {
-  position: fixed;
-  background-image: url(https://yasio.pl/assets/img/a5d79c8.webp);
-  background-position: 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: block;
-  min-height: calc(100vh - #{$nav-height});
-  width: 100%;
-  filter: grayscale(1) brightness(150%);
-  z-index: 0;
-}
-
 .intro {
   position: relative;
+  @include bg(calc(100vh - #{$nav-height}));
   color: var(--white);
   font-family: var(--lato-font);
   min-height: calc(100vh - #{$nav-height});
   font-size: 2em;
-  z-index: 1;
+  z-index: 2;
   &__name {
     color: var(--primary);
     @include linear-gradient-text(var(--third), var(--primary));
@@ -40,15 +28,4 @@
       letter-spacing: 0.5px;
     }
   }
-  // h2 {
-  //   line-height: 1.5em;
-  //   font-family: var(--lato-font);
-  //   span {
-  //     font-family: Roboto Mono, Courier New, Courier, monospace !important;
-  //   }
-  // }
-  // i {
-  //   font-family: Palatino, Georgia, Times New Roman, Times, serif;
-  //   font-weight: 300;
-  // }
 }
