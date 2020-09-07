@@ -3,3 +3,7 @@
   min-height: calc(100vh - #{$nav-height});
   background-color: var(--dark-grey);
 }
+
+app-section {
+  display: block;
+}

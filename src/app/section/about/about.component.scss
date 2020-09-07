@@ -1,8 +1,129 @@
-// .about {
-//   position: relative;
-//   color: var(--white);
-//   font-family: var(--lato-font);
-//   min-height: 100vh;
-//   font-size: 2em;
-//   z-index: 2;
-// }
+.code {
+  font-family: Roboto Mono, Courier New, Courier, monospace !important;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--main-code);
+  background-color: var(--bg-code);
+
+  &__line {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+
+    &:before {
+      transition: all 0.2s ease-in-out;
+    }
+    &:after {
+      content: attr(data-line-nr);
+      position: absolute;
+      width: 35px;
+      left: -50px;
+      color: var(--line-num-code);
+      font-family: Roboto Mono, Courier New, Courier, monospace !important;
+      font-size: 16px;
+      line-height: 1.6;
+      z-index: 3;
+      top: 0;
+      text-align: right;
+      background-color: var(--bg-code);
+      padding: 0px 40px 0px 10px;
+      z-index: 100;
+    }
+
+    &:hover {
+      &:before {
+        content: '';
+        height: 100%;
+        width: 101vw;
+        background-color: rgba(255, 255, 255, 0.1);
+        position: absolute;
+        top: 0px;
+        left: -22vw;
+        z-index: 120;
+      }
+    }
+
+    .code {
+      &__method {
+        margin: 0px 5px 0px 0px;
+        // &:not(:first-child) {
+        //   margin: 0px 5px;
+        // }
+      }
+      &__propname {
+        margin: 0px 5px 0px 0px;
+        &:not(:first-child) {
+          margin: 0px 5px;
+        }
+      }
+    }
+  }
+
+  &__text {
+    color: var(--text-code);
+  }
+
+  &__method {
+    color: var(--method-code);
+  }
+
+  &__propname {
+    color: var(--propname-code);
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      left: 0px;
+      bottom: 4px;
+      background-color: var(--propname-code);
+    }
+
+    &--alt {
+      margin: 0px !important;
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &__reserved {
+    color: var(--primary);
+  }
+
+  &__dot {
+    color: var(--dot-code);
+    display: inline;
+    margin: 0px 5px 0px 0px;
+
+    + .code {
+      &__reserved {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &__ref {
+    color: var(--ref-code);
+    + .code {
+      &__text {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &__str {
+    color: var(--str-code);
+  }
+
+  &__num {
+    color: var(--num-code);
+  }
+
+  &__comment {
+    color: var(--comment-code);
+    display: inline;
+  }
+}

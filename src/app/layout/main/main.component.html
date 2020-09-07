@@ -2,9 +2,9 @@
 <main class="container-fluid">
   <div class="row">
     <div class="col-12">
-      <app-intro></app-intro>
-      <!-- <app-section [title]="'intro'">
-      </app-section> -->
+      <app-section class="graphic-bg graphic-bg--with-header" [title]="'intro'" [startingblock]="isStartingBlock">
+        <app-intro></app-intro>
+      </app-section>
       <app-section [title]="'about'">
         <app-about></app-about>
       </app-section>

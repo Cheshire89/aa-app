@@ -2,13 +2,15 @@
 @import '../../../styles/mixins';
 
 .intro {
-  position: relative;
-  @include bg(calc(100vh - #{$nav-height}));
+  display: flex;
+  align-items: center;
+  // flex-direction: row;
   color: var(--white);
   font-family: var(--lato-font);
   min-height: calc(100vh - #{$nav-height});
-  font-size: 2em;
+  font-size: 2rem;
   z-index: 2;
+
   &__name {
     color: var(--primary);
     @include linear-gradient-text(var(--third), var(--primary));

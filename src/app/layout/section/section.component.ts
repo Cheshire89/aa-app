@@ -6,6 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./section.component.scss'],
 })
 export class SectionComponent implements OnInit {
+  @Input() startingblock = false;
   @Input() title;
   sectionTitle: string;
   constructor() {}

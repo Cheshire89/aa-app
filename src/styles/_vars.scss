@@ -9,6 +9,22 @@ $theme: (
   'third': #6a82f2,
   'dark-grey': #1d1d1d,
   'dark': #191919,
+  'green': #05f22e,
+);
+
+$code: (
+  'main': #e563da,
+  'bg': #272821,
+  'line-num': #878c89,
+  'text': #ffffff,
+  'method': #f205e2,
+  'propname': #05f22e,
+  'comment': #78707e,
+  'reserved': #00e7ff,
+  'dot': #44463f,
+  'ref': #ffa600,
+  'str': #e1d550,
+  'num': #a372f8,
 );
 
 $gradients: (
@@ -22,6 +38,9 @@ $nav-height: 68px;
 :root {
   @each $class, $color in $theme {
     --#{$class}: #{$color};
+  }
+  @each $class, $color in $code {
+    --#{$class}-code: #{$color};
   }
   @each $class, $font in $fonts {
     --#{$class}-font: #{$font};

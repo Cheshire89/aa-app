@@ -1,0 +1,11 @@
+.graphic-bg {
+  position: relative;
+  display: block;
+  @include bg(100%);
+  z-index: 0;
+  // &--with-header {
+  //   &:before {
+  //     min-height: calc(100vh - #{$nav-height});
+  //   }
+  // }
+}
