@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SkillScramplerComponent } from './skill-scrampler.component';
+import { ResumeIndexComponent } from './resume-index.component';
 
-describe('SkillScramplerComponent', () => {
-  let component: SkillScramplerComponent;
-  let fixture: ComponentFixture<SkillScramplerComponent>;
+describe('ResumeIndexComponent', () => {
+  let component: ResumeIndexComponent;
+  let fixture: ComponentFixture<ResumeIndexComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SkillScramplerComponent ]
+      declarations: [ ResumeIndexComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SkillScramplerComponent);
+    fixture = TestBed.createComponent(ResumeIndexComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

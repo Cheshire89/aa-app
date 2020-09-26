@@ -2,15 +2,7 @@
 <main class="container-fluid">
   <div class="row">
     <div class="col-12">
-      <app-section class="graphic-bg graphic-bg--with-header" [title]="'intro'" [startingblock]="isStartingBlock">
-        <app-intro></app-intro>
-      </app-section>
-      <app-section [title]="'about'">
-        <app-about></app-about>
-      </app-section>
-      <app-section [title]="'contact'">
-        <app-contact></app-contact>
-      </app-section>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </main>

@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-skill-scrampler',
-  templateUrl: './skill-scrampler.component.html',
-  styleUrls: ['./skill-scrampler.component.scss'],
+  selector: 'app-intro-skill-scrambler',
+  templateUrl: './intro-skill-scrambler.component.html',
+  styleUrls: ['./intro-skill-scrambler.component.scss'],
 })
-export class SkillScramplerComponent implements OnInit {
+export class IntroSkillScramblerComponent implements OnInit {
   private nouns = ['websites', 'api', 'webapps', 'ux/ui', 'things'];
   animationFinished: boolean;
   noun = '';

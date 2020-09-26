@@ -14,9 +14,6 @@
         </ng-template>
         <ng-template [ngIf]="obj.item.length === 0"> &nbsp; </ng-template>
       </div>
-      <ng-template [ngIf]="obj.children && obj.children.length > 0">
-        <ng-template *ngTemplateOutlet="recursiveListTmpl; context: { list: obj.children }"></ng-template>
-      </ng-template>
     </ng-template>
   </ng-template>
 </div>

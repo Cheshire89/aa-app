@@ -1,15 +1,30 @@
+$offset: 50px;
+$word-spacing: 5px;
 .code {
   font-family: Roboto Mono, Courier New, Courier, monospace !important;
   font-size: 16px;
   line-height: 1.6;
   color: var(--main-code);
   background-color: var(--bg-code);
+  min-width: 750px;
+  white-space: nowrap;
+  @media screen and (max-width: 990px) {
+    margin-left: $offset;
+  }
 
+  &__container {
+    // width: calc(100%);
+    overflow-x: auto;
+    width: calc(100% + #{$offset});
+    padding-left: 50px;
+    margin-left: -50px;
+  }
   &__line {
     position: relative;
     z-index: 1;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 
     &:before {
       transition: all 0.2s ease-in-out;
@@ -18,7 +33,7 @@
       content: attr(data-line-nr);
       position: absolute;
       width: 35px;
-      left: -50px;
+      left: -#{$offset};
       color: var(--line-num-code);
       font-family: Roboto Mono, Courier New, Courier, monospace !important;
       font-size: 16px;
@@ -29,6 +44,9 @@
       background-color: var(--bg-code);
       padding: 0px 40px 0px 10px;
       z-index: 100;
+      @media screen and(max-width: 990px) {
+        left: -#{$offset}px;
+      }
     }
 
     &:hover {
@@ -46,15 +64,15 @@
 
     .code {
       &__method {
-        margin: 0px 5px 0px 0px;
+        margin-right: $word-spacing;
         // &:not(:first-child) {
         //   margin: 0px 5px;
         // }
       }
       &__propname {
-        margin: 0px 5px 0px 0px;
+        margin-right: $word-spacing;
         &:not(:first-child) {
-          margin: 0px 5px;
+          margin: 0px $word-spacing;
         }
       }
     }
@@ -62,6 +80,12 @@
 
   &__text {
     color: var(--text-code);
+    margin-right: $word-spacing;
+    // + .code {
+    //   &__text {
+    //     margin-right: 0px !important;
+    //   }
+    // }
   }
 
   &__method {
@@ -91,16 +115,21 @@
 
   &__reserved {
     color: var(--primary);
+    + .code {
+      &__text {
+        margin-right: $word-spacing;
+      }
+    }
   }
 
   &__dot {
     color: var(--dot-code);
     display: inline;
-    margin: 0px 5px 0px 0px;
+    margin-right: $word-spacing;
 
     + .code {
       &__reserved {
-        margin-right: 5px;
+        margin-right: $word-spacing;
       }
     }
   }
@@ -109,13 +138,25 @@
     color: var(--ref-code);
     + .code {
       &__text {
-        margin-right: 5px;
+        margin-right: 0px;
       }
     }
   }
 
   &__str {
     color: var(--str-code);
+    &:not(:first-child),
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+    + .code {
+      &__text {
+        margin-right: $word-spacing;
+      }
+      &__str {
+        margin-right: 5px;
+      }
+    }
   }
 
   &__num {
@@ -125,5 +166,8 @@
   &__comment {
     color: var(--comment-code);
     display: inline;
+    &:not(:first-child) {
+      margin-right: 5px;
+    }
   }
 }
