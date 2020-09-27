@@ -1,0 +1,12 @@
+<div class="row justify-content-center my-5" *ngIf="post">
+  <div class="col-md-6">
+    <img src="https://via.placeholder.com/600x380.png?text=Image+Placeholder" class="card-img-top" alt="..." />
+    <div class="d-flex justify-content-end">
+      <p>
+        <span>{{ post.createdAt | date }}</span> By <span>{{ post.author }}</span>
+      </p>
+    </div>
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.body }}</p>
+  </div>
+</div>
