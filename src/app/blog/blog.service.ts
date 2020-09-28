@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Post } from './post.model';
 
 @Injectable({
   providedIn: 'root',
@@ -16,7 +17,15 @@ export class BlogService {
     return this.http.get(url);
   }
 
-  put() {}
-  update() {}
+  update(id: string, post: Post) {
+    const url = `${this.blogUrl}/${id}`;
+    return this.http.put(url, post);
+  }
+
+  create(post: Post) {
+    const url = this.blogUrl;
+    return this.http.post(url, post);
+  }
+
   delete() {}
 }
