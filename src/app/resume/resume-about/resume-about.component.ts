@@ -42,8 +42,9 @@ export class ResumeAboutComponent implements OnInit {
         str = replacedString(index, str);
       }
 
-      if (RegExp(/\'+(?=[\w]).+/g).test(str)) {
-        index = str.indexOf("'");
+      // string
+      if (RegExp(/\"+(?=[\w.]).+/g).test(str)) {
+        index = str.indexOf('\"');
         str = replacedString(index, str);
       }
 
@@ -53,43 +54,69 @@ export class ResumeAboutComponent implements OnInit {
 
   parseResume(arr: string[]): ResumeBlock[] {
     arr = this.preserveStrings(arr);
-
     const jsonResumeBlock = [];
     arr.forEach((str: string, index: number) => {
       const block: ResumeBlock = {
         item: [],
         line: index,
       };
-      let splitString = str.split(/\s/);
-      splitString.forEach((chunk: string) => {
-        if (chunk.length === 0) {
-          block.item[0] = this.setDots(block.item[0]);
-        } else {
-          // console.log('chunk', chunk);
-          const matches = chunk.match(/[()\.](?=[\w+]).\w+|[\w]+|^[\/|'].+|[.,;:|[\]({)}=/]+/gi);
-          // console.log('matches', matches);
-          if (matches) {
-            // console.log('---> ' + index, matches);
-            splitString = splitString.filter((val: string) => val.length > 0);
 
-            let type = null;
-            matches.forEach((match) => {
-              type = this.assignType(match, splitString, str.trim());
+      if (str.length === 0) {
+        block.item.push({
+          type: null,
+          str: ' '
+        });
+      } else {
+        const strArr = str.split(' ');
+        console.log(strArr);
+        strArr.forEach((chunk: string, index: number) => {
+          // console.log('chunk', chunk);
+          if (chunk === '') {
+            console.log('strArr', strArr[index - 1]);
+            if (index === 0 || (strArr[index - 1] === '')) {
               block.item.push({
-                type,
-                str: match,
+                type: 'dot',
+                str: '·'
               });
+            } else {
+              block.item.push({
+                type: null,
+                str: ' '
+              });
+            }
+          } else {
+            let fragments;
+            if (chunk.indexOf('\"') === -1) {
+              fragments = chunk.split(/([.:;[(){}\s])/g);
+            } else {
+              fragments = chunk.split(/([,\]])/g);
+            }
+
+
+            fragments.forEach((fragment: string) => {
+              if (fragment.length) {
+                const newBlock = {
+                  type: this.assignType(fragment, chunk.split(' ')),
+                  str: fragment
+                };
+
+                if (newBlock.type === 'str' || newBlock.type === 'comment') {
+                  newBlock.str = newBlock.str.replace(/[_]/g, ' ');
+                }
+                block.item.push(newBlock);
+              }
             });
           }
-        }
-      });
+        });
+      }
+
 
       jsonResumeBlock.push(block);
     });
     return jsonResumeBlock;
   }
 
-  assignType(chunk: string, contextArr: string[], str: string): string {
+  assignType(chunk: string, contextArr: string[]): string {
     let type = null;
     if (this.isReserved(chunk)) {
       type = 'reserved';
@@ -101,13 +128,13 @@ export class ResumeAboutComponent implements OnInit {
       type = 'str';
     } else if (this.isNum(chunk, contextArr)) {
       type = 'num';
-    } else if (this.isPropname(chunk, contextArr)) {
+    } else if (this.isPropname(chunk)) {
       type = 'propname';
     } else if (this.isPropNameAlt(chunk, contextArr)) {
       type = 'propname code__propname--alt';
     } else if (this.isText(chunk, contextArr)) {
       type = 'text';
-    } else if (this.isComment(str)) {
+    } else if (this.isComment(chunk)) {
       type = 'comment';
     }
     return type;
@@ -117,9 +144,12 @@ export class ResumeAboutComponent implements OnInit {
     if (!item) {
       item = {
         type: 'dot',
-        str: '·',
+        str: ' ',
       };
     } else {
+      if (item.str === ' ') {
+        item.str = '·';
+      }
       item.str += '·';
     }
     return item;
@@ -156,39 +186,20 @@ export class ResumeAboutComponent implements OnInit {
     return isValid;
   }
 
-  isPropname(str: string, contextArr: string[]): boolean {
-    const strIndex = contextArr.indexOf(str);
-    if (strIndex !== -1) {
-      const allowed = ['class', 'implements'];
-      if (allowed.includes(contextArr[strIndex - 1])) {
-        return true;
-      }
-    }
-    return false;
+  isPropname(str: string): boolean {
+      const allowed = [
+        'AleksandrAntonov',
+        'onDeveloper',
+      ];
+      return allowed.includes(str);
   }
 
   isString(str: string): boolean {
-    const indexOfQuote = str.lastIndexOf("'");
-    if (indexOfQuote > 1) {
-      this.concatString += this.concatString;
-      this.isStr = false;
-      return true;
-    } else if (indexOfQuote === 0 || this.isStr) {
-      this.concatString = str;
-      this.isStr = true;
-      return true;
-    } else {
-      return false;
-    }
+   return str.lastIndexOf('\"') > 0;
   }
 
   isNum(str: string, contextArr: string[]) {
-    contextArr = contextArr.slice(contextArr.indexOf('//'));
-    if (contextArr.length > 0) {
-      return parseInt(str, 10) && !contextArr.includes('//');
-    } else {
-      return parseInt(str, 10);
-    }
+   return parseInt(str, 10);
   }
 
   isReserved(str: string): boolean {

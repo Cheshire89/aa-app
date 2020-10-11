@@ -13,7 +13,7 @@ const routes: Routes = [
     component: MainComponent,
     children: [
       {
-        path: 'resume',
+        path: '',
         component: ResumeIndexComponent,
       },
       {

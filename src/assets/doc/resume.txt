@@ -4,76 +4,68 @@ export class AleksandrAntonov implements onDeveloper {
   dateOfBirthTimestamp: number;
   email: string;
 
-  // Im ambitious and love new challenges :)
-  // My vast variety of skills is continuously expanding
+  // Im ambitious and love new challenges &#128526&#129488
+  // My vast variety of skills is continuously expanding &#128640
 
   constructor(){
-    this.name = 'Aleksandr Antonov';
+    this.name = "Aleksandr Antonov";
     this.dateOfBirthTimestamp = 623894400;
-    this.email = 'antonov.a.aleksandr@gmail.com';
+    this.email = "antonov.a.aleksandr@gmail.com";
   }
 
   workExperience(){
     return [
       {
-        company: 'Voyant Communications',
-        title: 'Software Engineer',
-        start: new Date(2018, 1), // Feb 2018 - Present
+        company: "Voyant Communications",
+        title: "Software Engineer",
+        start: new Date(2018, 1), // Feb 2018 - Present &#128467
         end: new Date().getTime(),
-        location: 'Boulder, CO'
-
+        location: "Boulder&#x2c; CO"
       },
       {
-        company: 'Richmond American Homes',
-        title: 'Web Developer',
-        start: new Date(2017, 8), // Sep 2017 - Nov 2017
+        company: "Richmond American Homes",
+        title: "Web Developer",
+        start: new Date(2017, 8), // Sep 2017 - Nov 2017 &#128467
         end: new Date(2017, 10),
-        location: 'Denver, CO'
-
+        location: "Denver&#x2c; CO"
       },
       {
-        company: 'Lasyte Solutions',
-        title: 'Full Stack Lamp Developer',
-        start: new Date(2016, 7),  // Aug 2016 - Jun 2017
+        company: "Lasyte Solutions",
+        title: "Full Stack Lamp Developer",
+        start: new Date(2016, 7),  // Aug 2016 - Jun 2017 &#128467
         end: new Date(2017, 5),
-        location: 'Thornton, CO'
-
+        location: "Thornton&#x2c; CO"
       }
     ];
   }
 
   skills(){
-    const mySkills = {
+    return {
       general: [],
-      javascript: ['AngularJS', 'Angular', 'React', 'Nodejs', 'Express',
-                   'Mongodb', 'Ajax', 'JSON'],
-      other: ['PHP | Laravel', 'Java'],
-      agile: ['Jira', 'Trello', 'SCRUM']
+      javascript: ["AngularJS", "Angular", "React", "Nodejs", "Express", "Mongodb", "Ajax", "JSON"],
+      other: ["PHP | Laravel", "Java"],
+      agile: ["Jira", "Trello", "SCRUM"]
     };
-
-    return mySkills;
   }
 
   education(){
-    const certificates = [
+    return [
       {
-        title: 'Bootcamp Algorithms and Data Structures',
-        id: 'UC-e14bd676-2213-4bab-8630-dc32837fe6e2',
-        issue: new Date(2020, 8), // Sep 2020
-        exparation: 'No exparation',
-        organisation: 'Udemy',
-        link: 'www.udemy.com/certificate/UC-e14bd676-2213-4bab-8630-dc32837fe6e2'
+        title: "Bootcamp Algorithms and Data Structures",
+        id: "UC-e14bd676-2213-4bab-8630-dc32837fe6e2",
+        issue: new Date(2020, 8), // Sep 2020 &#128467
+        exparation: "No exparation",
+        organisation: "Udemy",
+        link: "www.udemy.com/certificate/UC-e14bd676-2213-4bab-8630-dc32837fe6e2"
       },
       {
-        title: 'Angular Complete Guide',
-        id: 'UC-b25860d0-d5c3-49f9-8271-865f0b9f95fb',
-        issue: new Date(2020, 5), // Jun 2020
-        exparation: 'No exparation',
-        organisation: 'Udemy',
-        link: 'www.udemy.com/certificate/UC-b25860d0-d5c3-49f9-8271-865f0b9f95fb'
+        title: "Angular Complete Guide",
+        id: "UC-b25860d0-d5c3-49f9-8271-865f0b9f95fb",
+        issue: new Date(2020, 5), // Jun 2020 &#128467
+        exparation: "No exparation",
+        organisation: "Udemy",
+        link: "www.udemy.com/certificate/UC-b25860d0-d5c3-49f9-8271-865f0b9f95fb"
       }
     ];
-
-    return [...certificates];
   }
 }

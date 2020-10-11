@@ -80,7 +80,7 @@ $word-spacing: 5px;
 
   &__text {
     color: var(--text-code);
-    margin-right: $word-spacing;
+    // margin-right: $word-spacing;
     // + .code {
     //   &__text {
     //     margin-right: 0px !important;
@@ -115,11 +115,11 @@ $word-spacing: 5px;
 
   &__reserved {
     color: var(--primary);
-    + .code {
-      &__text {
-        margin-right: $word-spacing;
-      }
-    }
+    // + .code {
+    //   &__text {
+    //     margin-right: $word-spacing;
+    //   }
+    // }
   }
 
   &__dot {
@@ -127,11 +127,11 @@ $word-spacing: 5px;
     display: inline;
     margin-right: $word-spacing;
 
-    + .code {
-      &__reserved {
-        margin-right: $word-spacing;
-      }
-    }
+    // + .code {
+    //   &__reserved {
+    //     margin-right: $word-spacing;
+    //   }
+    // }
   }
 
   &__ref {
