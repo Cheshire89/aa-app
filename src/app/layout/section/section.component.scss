@@ -7,18 +7,21 @@ $pad: 2%;
   min-height: 100vh;
   font-size: 2em;
   z-index: 2;
-  border-top: 1px dotted red;
+  // border-top: 1px dotted red;
   &__container {
     padding-top: 80px;
+    position: relative;
+    min-height: 100vh;
   }
 
   &.intro {
     min-height: calc(100vh - #{$nav-height});
   }
 
-  // &.about {
-  //   > div {
-  //     background-color: #272821;
-  //   }
-  // }
+  &.contact {
+    min-height: 0px;
+    .section__container {
+      min-height: 0px;
+    }
+  }
 }

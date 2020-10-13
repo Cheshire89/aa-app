@@ -8,6 +8,7 @@ import { ResumeIntroComponent } from './resume-intro/resume-intro.component';
 import { IntroSkillScramblerComponent } from './resume-intro/intro-skill-scrambler/intro-skill-scrambler.component';
 import { LayoutModule } from '../layout/layout.module';
 import { ResumeIndexComponent } from './resume-index/resume-index.component';
+import { ResumeFooterComponent } from './resume-footer/resume-footer.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ResumeIndexComponent } from './resume-index/resume-index.component';
     ResumeAboutComponent,
     ResumeIntroComponent,
     IntroSkillScramblerComponent,
+    ResumeFooterComponent,
   ],
   imports: [CommonModule, LayoutModule, HttpClientModule],
 })

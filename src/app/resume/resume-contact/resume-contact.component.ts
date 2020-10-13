@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./resume-contact.component.scss']
 })
 export class ResumeContactComponent implements OnInit {
-
+  currentYear = new Date().getFullYear();
   constructor() { }
 
   ngOnInit() {
