@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup, Validators, NgForm, FormControl } from '@angula
   styleUrls: ['./signin.component.scss'],
 })
 export class SigninComponent implements OnInit {
-  @ViewChild('signinRef') signinRef: NgForm;
+  @ViewChild('signinRef', { static: true }) signinRef: NgForm;
   signin: FormGroup;
 
   constructor(private fb: FormBuilder) {}

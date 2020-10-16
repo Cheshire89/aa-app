@@ -10,7 +10,7 @@ import { Post } from '../post.model';
   styleUrls: ['./blog-edit.component.scss'],
 })
 export class BlogEditComponent implements OnInit {
-  @ViewChild('postForm') postForm: NgForm;
+  @ViewChild('postForm', { static: true }) postForm: NgForm;
   editPostFrom: FormGroup;
   post: Post = null;
   constructor(
