@@ -30,8 +30,7 @@
               "node_modules/normalize-scss/sass/_normalize.scss",
               "src/styles/index.scss"
             ],
-            "scripts": [],
-            "es5BrowserSupport": true
+            "scripts": []
           },
           "configurations": {
             "production": {
