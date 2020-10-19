@@ -1,0 +1,9 @@
+set -e
+echo
+echo Running deployment script ...
+echo Building debug package branch $aa_env ...
+./node_modules/.bin/ng build --configuration $aa_env
+echo Deploying to $s3_bucket ...
+aws s3 cp dist/aa-personal s3://$s3_bucket/ --recursive
+aws cloudfront create-invalidation --distribution-id $cf_distro --paths '/*'
+echo Build Finished!
