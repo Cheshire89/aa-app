@@ -30,7 +30,8 @@
               "node_modules/normalize-scss/sass/_normalize.scss",
               "src/styles/index.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "aot": false
           },
           "configurations": {
             "production": {
