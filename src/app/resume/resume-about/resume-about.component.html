@@ -1,5 +1,5 @@
+<div class="code__wrapper">
 <section class="code">
-  <div class="code__wrapper">
     <ng-template *ngTemplateOutlet="recursiveListTmpl; context: { list: about }"></ng-template>
     <ng-template #recursiveListTmpl let-x="index" let-list="list">
       <ng-template ngFor let-obj let-wrap="false" [ngForOf]="list">
@@ -16,5 +16,5 @@
         </div>
       </ng-template>
     </ng-template>
-  </div>
-</section>
+  </section>
+</div>

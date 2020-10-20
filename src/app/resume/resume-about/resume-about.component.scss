@@ -8,13 +8,15 @@ $word-spacing: 5px;
   background-color: var(--bg-code);
   width: auto;
   white-space: nowrap;
+  padding-left: 25px;
   @media screen and (max-width: 990px) {
     margin-left: $offset;
   }
   &__wrapper {
     max-height: 100vh;
     overflow-y: scroll;
-    overflow-x: hidden;
+    overflow-x: auto;
+    padding-left: 25px;
   }
   &__container {
     // width: calc(100%);
