@@ -6,12 +6,16 @@ $word-spacing: 5px;
   line-height: 1.6;
   color: var(--main-code);
   background-color: var(--bg-code);
-  min-width: 750px;
+  width: auto;
   white-space: nowrap;
   @media screen and (max-width: 990px) {
     margin-left: $offset;
   }
-
+  &__wrapper {
+    max-height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
   &__container {
     // width: calc(100%);
     overflow-x: auto;

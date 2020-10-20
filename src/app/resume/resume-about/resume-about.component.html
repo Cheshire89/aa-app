@@ -1,19 +1,20 @@
-<div class="code">
-  <ng-template *ngTemplateOutlet="recursiveListTmpl; context: { list: about }"></ng-template>
-
-  <ng-template #recursiveListTmpl let-x="index" let-list="list">
-    <ng-template ngFor let-obj let-wrap="false" [ngForOf]="list">
-      <div class="code__line" [attr.data-line-nr]="obj.line">
-        <ng-template ngFor let-chunk [ngForOf]="obj.item">
-          <ng-template [ngIf]="chunk.type !== null" [ngIfElse]="altChunk">
-            <span [ngClass]="'code__' + chunk.type" [innerHtml]="chunk.str"></span>
+<section class="code">
+  <div class="code__wrapper">
+    <ng-template *ngTemplateOutlet="recursiveListTmpl; context: { list: about }"></ng-template>
+    <ng-template #recursiveListTmpl let-x="index" let-list="list">
+      <ng-template ngFor let-obj let-wrap="false" [ngForOf]="list">
+        <div class="code__line" [attr.data-line-nr]="obj.line">
+          <ng-template ngFor let-chunk [ngForOf]="obj.item">
+            <ng-template [ngIf]="chunk.type !== null" [ngIfElse]="altChunk">
+              <span [ngClass]="'code__' + chunk.type" [innerHtml]="chunk.str"></span>
+            </ng-template>
+            <ng-template #altChunk>
+              &nbsp;
+            </ng-template>
           </ng-template>
-          <ng-template #altChunk>
-            &nbsp;
-          </ng-template>
-        </ng-template>
-        <ng-template [ngIf]="obj.item.length === 1"> &nbsp; </ng-template>
-      </div>
+          <ng-template [ngIf]="obj.item.length === 1"> &nbsp; </ng-template>
+        </div>
+      </ng-template>
     </ng-template>
-  </ng-template>
-</div>
+  </div>
+</section>
