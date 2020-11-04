@@ -52,6 +52,14 @@ export class AleksandrAntonov implements onDeveloper {
   education(){
     return [
       {
+        title: "REST APIs with Flask and Python",
+        id: "UC-b2cb7ac9-fc95-4ebe-a59e-dae991700d2f",
+        issue: new Date(2020 , 10), // Nov 2020 &#128467
+        exparation: "No exparation",
+        organisation: "Udemy",
+        link: "www.udemy.com/certificate/UC-b2cb7ac9-fc95-4ebe-a59e-dae991700d2f"
+      },
+      {
         title: "Bootcamp Algorithms and Data Structures",
         id: "UC-e14bd676-2213-4bab-8630-dc32837fe6e2",
         issue: new Date(2020 , 8), // Sep 2020 &#128467
