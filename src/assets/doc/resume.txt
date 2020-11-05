@@ -44,7 +44,8 @@ export class AleksandrAntonov implements onDeveloper {
       general: [],
       javascript: ["AngularJS", "Angular", "React", "Nodejs", "Express",
       "Mongodb", "Ajax", "JSON"],
-      other: ["PHP | Laravel", "Java"],
+      python: ['Flask', 'Django'],
+      other: ["PHP | Laravel"],
       agile: ["Jira", "Trello", "SCRUM"]
     };
   }
