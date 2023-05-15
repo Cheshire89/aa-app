@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./intro-skill-scrambler.component.scss'],
 })
 export class IntroSkillScramblerComponent implements OnInit {
-  private nouns = ['websites', 'api', 'webapps', 'ux/ui', 'things'];
+  private nouns = ['apps', 'apis', 'webapps', 'ux/ui', 'tools'];
   animationFinished: boolean;
   noun = '';
   nextNoun: string;

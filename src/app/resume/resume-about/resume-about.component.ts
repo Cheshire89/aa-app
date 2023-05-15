@@ -44,7 +44,7 @@ export class ResumeAboutComponent implements OnInit {
 
       // string
       if (RegExp(/\"+(?=[\w.]).+/g).test(str)) {
-        index = str.indexOf('\"');
+        index = str.indexOf('"');
         str = replacedString(index, str);
       }
 
@@ -64,40 +64,36 @@ export class ResumeAboutComponent implements OnInit {
       if (str.length === 0) {
         block.item.push({
           type: null,
-          str: ' '
+          str: ' ',
         });
       } else {
         const strArr = str.split(' ');
-        console.log(strArr);
         strArr.forEach((chunk: string, index: number) => {
-          // console.log('chunk', chunk);
           if (chunk === '') {
-            console.log('strArr', strArr[index - 1]);
-            if (index === 0 || (strArr[index - 1] === '')) {
+            if (index === 0 || strArr[index - 1] === '') {
               block.item.push({
                 type: 'dot',
-                str: '·'
+                str: '·',
               });
             } else {
               block.item.push({
                 type: null,
-                str: ' '
+                str: ' ',
               });
             }
           } else {
             let fragments;
-            if (chunk.indexOf('\"') === -1) {
+            if (chunk.indexOf('"') === -1) {
               fragments = chunk.split(/([.:;[(){}\s])/g);
             } else {
               fragments = chunk.split(/([,\]])/g);
             }
 
-
             fragments.forEach((fragment: string) => {
               if (fragment.length) {
                 const newBlock = {
                   type: this.assignType(fragment, chunk.split(' ')),
-                  str: fragment
+                  str: fragment,
                 };
 
                 if (newBlock.type === 'str' || newBlock.type === 'comment') {
@@ -109,7 +105,6 @@ export class ResumeAboutComponent implements OnInit {
           }
         });
       }
-
 
       jsonResumeBlock.push(block);
     });
@@ -187,19 +182,16 @@ export class ResumeAboutComponent implements OnInit {
   }
 
   isPropname(str: string): boolean {
-      const allowed = [
-        'AleksandrAntonov',
-        'onDeveloper',
-      ];
-      return allowed.includes(str);
+    const allowed = ['AleksandrAntonov', 'onDeveloper'];
+    return allowed.includes(str);
   }
 
   isString(str: string): boolean {
-   return str.lastIndexOf('\"') > 0;
+    return str.lastIndexOf('"') > 0;
   }
 
   isNum(str: string, contextArr: string[]) {
-   return parseInt(str, 10);
+    return parseInt(str, 10);
   }
 
   isReserved(str: string): boolean {

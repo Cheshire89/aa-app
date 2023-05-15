@@ -13,8 +13,8 @@ $word-spacing: 5px;
     margin-left: $offset;
   }
   &__wrapper {
-    max-height: 100vh;
-    overflow-y: scroll;
+    // max-height: 100vh;
+    // overflow-y: scroll;
     overflow-x: auto;
     padding-left: 25px;
   }

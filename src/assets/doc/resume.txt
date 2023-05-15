@@ -1,7 +1,6 @@
 
 export class AleksandrAntonov implements onDeveloper {
   name: string;
-  dateOfBirthTimestamp: number;
   email: string;
 
   // Im ambitious and love new challenges &#128526&#129488
@@ -9,31 +8,37 @@ export class AleksandrAntonov implements onDeveloper {
 
   constructor(){
     this.name = "Aleksandr Antonov";
-    this.dateOfBirthTimestamp = 623894400;
     this.email = "antonov.a.aleksandr@gmail.com";
   }
 
   workExperience(){
     return [
       {
+        company: "Rocket Communications",
+        title: "Senior Front End Developer",
+        start: new Date(2021, 01), // Jan 2021 - Apr 2023 &#128467
+        end: new Date(2023, 03),
+        location: "Denver&#x2c; CO (Remote)"
+      },
+      {
         company: "Voyant Communications",
         title: "Software Engineer",
-        start: new Date(2018 , 1), // Feb 2018 - Present &#128467
-        end: new Date().getTime(),
-        location: "Boulder&#x2c; CO"
+        start: new Date(2018, 01), // Feb 2018 - Jan 2021 &#128467
+        end: new Date(2021, 0),
+        location: "Boulder&#x2c; CO (Remote)"
       },
       {
         company: "Richmond American Homes",
         title: "Web Developer",
-        start: new Date(2017 , 8), // Sep 2017 - Nov 2017 &#128467
-        end: new Date(2017 , 10),
+        start: new Date(2017, 08), // Sep 2017 - Nov 2017 &#128467
+        end: new Date(2017, 10),
         location: "Denver&#x2c; CO"
       },
       {
         company: "Lasyte Solutions",
         title: "Full Stack Lamp Developer",
-        start: new Date(2016 , 7),  // Aug 2016 - Jun 2017 &#128467
-        end: new Date(2017 , 5),
+        start: new Date(2016 , 07),  // Aug 2016 - Jun 2017 &#128467
+        end: new Date(2017 , 05),
         location: "Thornton&#x2c; CO"
       }
     ];
@@ -41,17 +46,38 @@ export class AleksandrAntonov implements onDeveloper {
 
   skills(){
     return {
-      general: [],
-      javascript: ["AngularJS", "Angular", "React", "Nodejs", "Express",
-      "Mongodb", "Ajax", "JSON"],
-      python: ['Flask', 'Django'],
-      other: ["PHP | Laravel"],
+      cicd: ["Teamcity"],
+      javascript: {
+        Angular: ["v1", "v13+", "NgRx", "Rxjs", "Apollo"],
+        Reactjs: ["Redux"],
+        Nodejs: ["Express", "Mongodb"],
+        general: ["Ajax", "JSON", "Store"],
+      },
+      python: ["Django"],
+      php: ["Laravel"],
       agile: ["Jira", "Trello", "SCRUM"]
+      other: ["GraphQl", "MySql"]
     };
   }
 
   education(){
     return [
+      {
+        title: "Pyton Django - Complete Course",
+        id: "UC-263fb597-b901-496f-8bd3-98f0d7221e00",
+        issue: new Date(2023 , 01), // Jan 2023 &#128467
+        exparation: "No exparation",
+        organisation: "Udemy",
+        link: "https://www.udemy.com/certificate/UC-263fb597-b901-496f-8bd3-98f0d7221e00/"
+      },
+      {
+        title: "Build a Backend REST API with Python & Django - Beginer",
+        id: "UC-492497c6-798a-457e-bd62-694a298ecad9",
+        issue: new Date(2021 , 11), // Nov 2021 &#128467
+        exparation: "No exparation",
+        organisation: "Udemy",
+        link: "https://www.udemy.com/certificate/UC-492497c6-798a-457e-bd62-694a298ecad9/"
+      },
       {
         title: "REST APIs with Flask and Python",
         id: "UC-b2cb7ac9-fc95-4ebe-a59e-dae991700d2f",
