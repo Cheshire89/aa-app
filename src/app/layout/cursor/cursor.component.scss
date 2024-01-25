@@ -15,7 +15,7 @@
 
 .cursor {
   @include init-circle(0.35rem);
-  background-color: var(--bs-white);
+  background-color: var(--theme-white);
   pointer-events: none;
   opacity: 1;
 
@@ -29,7 +29,7 @@
 
   &__outline {
     @include init-circle(1.5rem);
-    border: 1px solid var(--bs-white);
+    border: 1px solid var(--theme-white);
     transition: all 0.1s linear;
 
     &--down {

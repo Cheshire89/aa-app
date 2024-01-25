@@ -3,13 +3,13 @@
     // background-clip: none;
     &:before {
       content: '<';
-      color: var(--bs-white);
+      color: var(--theme-white);
       margin-right: 3px;
       -webkit-text-fill-color: #fff;
     }
     &:after {
       content: '/>';
-      color: var(--bs-white);
+      color: var(--theme-white);
       margin-left: 3px;
       -webkit-text-fill-color: #fff;
     }

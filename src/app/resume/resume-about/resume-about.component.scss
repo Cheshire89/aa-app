@@ -31,6 +31,7 @@ $word-spacing: 5px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    padding-left: 35px;
 
     &:before {
       transition: all 0.2s ease-in-out;

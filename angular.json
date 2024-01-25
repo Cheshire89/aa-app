@@ -26,7 +26,6 @@
             "styles": [
               "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss",
               "node_modules/@fortawesome/fontawesome-free/scss/solid.scss",
-              "node_modules/bootstrap/scss/bootstrap.scss",
               "node_modules/normalize-scss/sass/_normalize.scss",
               "src/styles/index.scss"
             ],

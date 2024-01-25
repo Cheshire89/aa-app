@@ -1,8 +1,9 @@
 @import '../../../styles/vars';
 $pad: 2%;
 .section {
+  justify-items: center;
   position: relative;
-  color: var(--bs-white);
+  color: var(--theme-white);
   font-family: var(--theme-lato-font);
   min-height: 100vh;
   font-size: 2em;

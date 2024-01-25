@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   // flex-direction: row;
-  color: var(--bs-white);
+  color: var(--theme-white);
   font-family: var(--theme-lato-font);
   min-height: calc(100vh - #{$nav-height});
   font-size: 2rem;

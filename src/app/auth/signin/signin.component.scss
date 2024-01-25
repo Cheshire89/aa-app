@@ -1,7 +1,0 @@
-@import '../../../styles/vars';
-@import '../../../styles/mixins';
-
-.container-fluid {
-  @include bg(100vh);
-  min-height: calc(100vh);
-}

@@ -1,0 +1,29 @@
+.container {
+    padding-right: calc(var(--grid-gutter-x) * .5);
+    padding-left: calc(var(--grid-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.container-fluid{
+    @extend .container;
+    width: 100%;
+}
