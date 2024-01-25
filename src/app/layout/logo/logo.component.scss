@@ -2,12 +2,12 @@
 
 .layout {
   &__logo {
-    @include linear-gradient-text(var(--primary), var(--third));
+    @include linear-gradient-text(var(--theme-primary), var(--theme-third));
     font-size: 48px;
     line-height: 48px;
     font-weight: 900;
-    font-family: var(--lato-font);
-    color: var(--secondary);
+    font-family: var(--theme-lato-font);
+    color: var(--theme-secondary);
     text-decoration: none;
 
     display: inline-block;
@@ -15,8 +15,8 @@
     user-select: none;
     position: relative;
     span {
-      @include linear-gradient-text(var(--primary), var(--secondary));
-      color: var(--secondary);
+      @include linear-gradient-text(var(--theme-primary), var(--theme-secondary));
+      color: var(--theme-secondary);
       position: absolute;
       top: 0px;
       left: 50%;

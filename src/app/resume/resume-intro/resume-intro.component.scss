@@ -5,21 +5,23 @@
   display: flex;
   align-items: center;
   // flex-direction: row;
-  color: var(--white);
-  font-family: var(--lato-font);
+  color: var(--bs-white);
+  font-family: var(--theme-lato-font);
   min-height: calc(100vh - #{$nav-height});
   font-size: 2rem;
   z-index: 2;
 
   &__name {
-    color: var(--primary);
-    @include linear-gradient-text(var(--third), var(--primary));
+    color: var(--theme-primary);
+    @include linear-gradient-text(var(--theme-third), var(--theme-primary));
   }
 
   &__text {
     font-weight: 700;
     font-size: 1.5em;
     line-height: 1.5em;
+    color: #fff;
+
     i {
       font-family: Palatino, Georgia, Times New Roman, Times, serif;
       font-weight: 300;

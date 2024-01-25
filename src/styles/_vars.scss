@@ -36,15 +36,15 @@ $nav-height: 68px;
 
 :root {
   @each $class, $color in $theme {
-    --#{$class}: #{$color};
+    --theme-#{$class}: #{$color};
   }
   @each $class, $color in $code {
-    --#{$class}-code: #{$color};
+    --theme-#{$class}-code: #{$color};
   }
   @each $class, $font in $fonts {
-    --#{$class}-font: #{$font};
+    --theme-#{$class}-font: #{$font};
   }
   @each $class, $gradient in $gradients {
-    --#{$class}-grd: #{$gradient};
+    --theme-#{$class}-grd: #{$gradient};
   }
 }

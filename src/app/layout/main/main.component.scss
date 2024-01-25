@@ -1,7 +1,7 @@
 @import '../../../styles/vars';
 .container-fluid {
   min-height: calc(100vh - #{$nav-height});
-  background-color: var(--dark-grey);
+  background-color: var(--theme-dark-grey);
 }
 
 app-section {

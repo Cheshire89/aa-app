@@ -8,7 +8,7 @@
     top: 25vh;
     height: 100vh;
     z-index: 9;
-    background-color: var(--third);
+    background-color: var(--theme-third);
     &--alt {
       top: 0;
       height: 100%;
@@ -26,8 +26,8 @@
       width: 9px;
       height: 9px;
       border-radius: 50%;
-      border: 2px solid var(--third);
-      background-color: var(--dark);
+      border: 2px solid var(--theme-third);
+      background-color: var(--theme-dark);
     }
 
     &--alt {

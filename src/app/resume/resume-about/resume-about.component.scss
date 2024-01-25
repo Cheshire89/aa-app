@@ -4,8 +4,8 @@ $word-spacing: 5px;
   font-family: Roboto Mono, Courier New, Courier, monospace !important;
   font-size: 16px;
   line-height: 1.6;
-  color: var(--main-code);
-  background-color: var(--bg-code);
+  color: var(--theme-main-code);
+  background-color: var(--theme-bg-code);
   width: auto;
   white-space: nowrap;
   padding-left: 25px;
@@ -40,17 +40,17 @@ $word-spacing: 5px;
       position: absolute;
       width: 35px;
       left: -#{$offset};
-      color: var(--line-num-code);
+      color: var(--theme-line-num-code);
       font-family: Roboto Mono, Courier New, Courier, monospace !important;
       font-size: 16px;
       line-height: 1.6;
       z-index: 3;
       top: 0;
       text-align: right;
-      background-color: var(--bg-code);
+      background-color: var(--theme-bg-code);
       padding: 0px 40px 0px 10px;
       z-index: 100;
-      @media screen and(max-width: 990px) {
+      @media screen and (max-width: 990px) {
         left: -#{$offset}px;
       }
     }
@@ -85,7 +85,7 @@ $word-spacing: 5px;
   }
 
   &__text {
-    color: var(--text-code);
+    color: var(--theme-text-code);
     // margin-right: $word-spacing;
     // + .code {
     //   &__text {
@@ -95,11 +95,11 @@ $word-spacing: 5px;
   }
 
   &__method {
-    color: var(--method-code);
+    color: var(--theme-method-code);
   }
 
   &__propname {
-    color: var(--propname-code);
+    color: var(--theme-propname-code);
     position: relative;
     &:after {
       content: '';
@@ -108,7 +108,7 @@ $word-spacing: 5px;
       height: 1px;
       left: 0px;
       bottom: 4px;
-      background-color: var(--propname-code);
+      background-color: var(--theme-propname-code);
     }
 
     &--alt {
@@ -120,7 +120,7 @@ $word-spacing: 5px;
   }
 
   &__reserved {
-    color: var(--primary);
+    color: var(--theme-primary);
     // + .code {
     //   &__text {
     //     margin-right: $word-spacing;
@@ -129,7 +129,7 @@ $word-spacing: 5px;
   }
 
   &__dot {
-    color: var(--dot-code);
+    color: var(--theme-dot-code);
     display: inline;
     margin-right: $word-spacing;
 
@@ -141,7 +141,7 @@ $word-spacing: 5px;
   }
 
   &__ref {
-    color: var(--ref-code);
+    color: var(--theme-ref-code);
     + .code {
       &__text {
         margin-right: 0px;
@@ -150,7 +150,7 @@ $word-spacing: 5px;
   }
 
   &__str {
-    color: var(--str-code);
+    color: var(--theme-str-code);
     &:not(:first-child),
     &:not(:last-child) {
       margin-right: 5px;
@@ -166,11 +166,11 @@ $word-spacing: 5px;
   }
 
   &__num {
-    color: var(--num-code);
+    color: var(--theme-num-code);
   }
 
   &__comment {
-    color: var(--comment-code);
+    color: var(--theme-comment-code);
     display: inline;
     &:not(:first-child) {
       margin-right: 5px;
