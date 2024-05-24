@@ -1,5 +1,8 @@
-<app-section class="graphic-bg graphic-bg--with-header" [title]="'intro'" [startingblock]="isStartingBlock">
+<app-section [title]="'intro'" appMatrixBg [startingblock]="isStartingBlock">
   <app-resume-intro></app-resume-intro>
+</app-section>
+<app-section [title]="'work'" class="work_section">
+  <app-resume-work></app-resume-work>
 </app-section>
 <app-section [title]="'about'">
   <app-resume-about></app-resume-about>

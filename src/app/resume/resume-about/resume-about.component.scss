@@ -8,30 +8,21 @@ $word-spacing: 5px;
   background-color: var(--theme-bg-code);
   width: auto;
   white-space: nowrap;
-  padding-left: 25px;
-  @media screen and (max-width: 990px) {
-    margin-left: $offset;
-  }
+
   &__wrapper {
-    // max-height: 100vh;
-    // overflow-y: scroll;
-    overflow-x: auto;
-    padding-left: 25px;
+    // overflow-x: auto;
   }
+
   &__container {
-    // width: calc(100%);
     overflow-x: auto;
-    width: calc(100% + #{$offset});
-    padding-left: 50px;
-    margin-left: -50px;
   }
+
   &__line {
     position: relative;
     z-index: 1;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    padding-left: 35px;
 
     &:before {
       transition: all 0.2s ease-in-out;
@@ -39,18 +30,18 @@ $word-spacing: 5px;
     &:after {
       content: attr(data-line-nr);
       position: absolute;
-      width: 35px;
-      left: -#{$offset};
       color: var(--theme-line-num-code);
       font-family: Roboto Mono, Courier New, Courier, monospace !important;
       font-size: 16px;
       line-height: 1.6;
-      z-index: 3;
       top: 0;
+      left: -55px;
+      width: 35px;
+      padding-right: 20px;
       text-align: right;
       background-color: var(--theme-bg-code);
-      padding: 0px 40px 0px 10px;
       z-index: 100;
+
       @media screen and (max-width: 990px) {
         left: -#{$offset}px;
       }
@@ -60,21 +51,18 @@ $word-spacing: 5px;
       &:before {
         content: '';
         height: 100%;
-        width: 101vw;
-        background-color: rgba(255, 255, 255, 0.1);
+        width: 300%;
+        background-color: #ffffff1a;
         position: absolute;
-        top: 0px;
-        left: -22vw;
-        z-index: 120;
+        top: 0;
+        left: -100%;
+        z-index: 110;
       }
     }
 
     .code {
       &__method {
         margin-right: $word-spacing;
-        // &:not(:first-child) {
-        //   margin: 0px 5px;
-        // }
       }
       &__propname {
         margin-right: $word-spacing;
@@ -87,12 +75,6 @@ $word-spacing: 5px;
 
   &__text {
     color: var(--theme-text-code);
-    // margin-right: $word-spacing;
-    // + .code {
-    //   &__text {
-    //     margin-right: 0px !important;
-    //   }
-    // }
   }
 
   &__method {
@@ -122,23 +104,12 @@ $word-spacing: 5px;
 
   &__reserved {
     color: var(--theme-primary);
-    // + .code {
-    //   &__text {
-    //     margin-right: $word-spacing;
-    //   }
-    // }
   }
 
   &__dot {
     color: var(--theme-dot-code);
     display: inline;
     margin-right: $word-spacing;
-
-    // + .code {
-    //   &__reserved {
-    //     margin-right: $word-spacing;
-    //   }
-    // }
   }
 
   &__ref {
@@ -152,6 +123,7 @@ $word-spacing: 5px;
 
   &__str {
     color: var(--theme-str-code);
+    z-index: 300;
     &:not(:first-child),
     &:not(:last-child) {
       margin-right: 5px;
@@ -163,6 +135,11 @@ $word-spacing: 5px;
       &__str {
         margin-right: 5px;
       }
+    }
+
+    a {
+      text-decoration: none;
+      color: tomato;
     }
   }
 

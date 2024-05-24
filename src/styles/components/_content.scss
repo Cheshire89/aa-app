@@ -20,7 +20,7 @@
     &:before {
       content: '';
       position: absolute;
-      left: -4px;
+      left: -6px;
       top: 0;
       z-index: 10;
       width: 9px;
@@ -40,8 +40,8 @@
     &:before {
       content: attr(data-label);
       position: absolute;
-      left: 12px;
-      top: -12px;
+      left: 22px;
+      top: -6px;
       width: auto;
       font-size: 20px;
     }

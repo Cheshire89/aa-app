@@ -23,6 +23,10 @@
     @include set-circle-size(0.55rem);
   }
 
+  &--link {
+    content: 'U+2B08'
+  }
+
   &--hide {
     opacity: 0;
   }
@@ -41,5 +45,11 @@
       z-index: 1001;
       backdrop-filter: hue-rotate(90deg) saturate(500%);
     }
+
+    &--link {
+      opacity: 0;
+    }
   }
+
+  
 }

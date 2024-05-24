@@ -1,5 +1,18 @@
 @import '../../../styles/vars';
 @import '../../../styles/mixins';
+// :host {
+//   position: relative;
+// }
+canvas {
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  // height: calc(100vh + 100px);
+  // width: 100vw;
+  // left: -50%;
+  // top: -100px;
+}
 
 .intro {
   display: flex;

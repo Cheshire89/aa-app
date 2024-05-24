@@ -1,11 +1,11 @@
-import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
+import { Component, OnInit, ElementRef, HostListener, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-cursor',
   templateUrl: './cursor.component.html',
   styleUrls: ['./cursor.component.scss'],
 })
-export class CursorComponent implements OnInit {
+export class CursorComponent implements OnInit, AfterViewInit {
   links: NodeList;
   cursor;
   cursorOutline;
@@ -41,6 +41,7 @@ export class CursorComponent implements OnInit {
     this.cursor.classList.add('cursor--down');
     this.cursorOutline.classList.add('cursor__outline--down');
   }
+
   @HostListener('document:mouseup', ['$event'])
   onMouseUp(e: MouseEvent) {
     this.cursor.classList.remove('cursor--down');
@@ -65,5 +66,13 @@ export class CursorComponent implements OnInit {
         this.cursorOutline.classList.add('cursor__outline--grow');
       });
     });
+  }
+
+  ngAfterViewInit(): void {
+    this.cursor = this.ele.nativeElement.children[0];
+    this.cursorOutline = this.ele.nativeElement.children[1];
+    this.links = document.querySelectorAll('a');
+
+    console.log('links', document.querySelectorAll('a'));
   }
 }

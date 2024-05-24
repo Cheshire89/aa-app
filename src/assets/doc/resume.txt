@@ -14,6 +14,13 @@ export class AleksandrAntonov implements onDeveloper {
   workExperience(){
     return [
       {
+        company: "Charter Communications",
+        title: "Solutions Architect",
+        start: new Date(2023, 06), // Jun 2023 - May 2024 &#128467
+        end: new Date(2024, 05),
+        location: "Denver&#x2c; CO (Hybrid)"
+      },
+      {
         company: "Rocket Communications",
         title: "Senior Front End Developer",
         start: new Date(2021, 01), // Jan 2021 - Apr 2023 &#128467
@@ -48,59 +55,52 @@ export class AleksandrAntonov implements onDeveloper {
     return {
       cicd: ["Teamcity"],
       javascript: {
-        Angular: ["v1", "v13+", "NgRx", "Rxjs", "Apollo"],
+        Angular: ["v1", "v13+", "NgRx", 
+          "Rxjs", "Apollo", "Ionic", "Capacitor"],
         Reactjs: ["Redux"],
         Nodejs: ["Express", "Mongodb"],
         general: ["Ajax", "JSON", "Store"],
+        mobile: ["IOS (Swift)", "Androdid (Java)"]
       },
       python: ["Django"],
       php: ["Laravel"],
-      agile: ["Jira", "Trello", "SCRUM"]
-      other: ["GraphQl", "MySql"]
+      agile: ["Jira", "Trello", "SCRUM"],
+      other: ["GraphQl", "MySql"],
+      AI: ['chatGpt']
     };
   }
 
   education(){
     return [
       {
-        title: "Pyton Django - Complete Course",
+        title: "Udemy | Pyton Django - Complete Course",
         id: "UC-263fb597-b901-496f-8bd3-98f0d7221e00",
         issue: new Date(2023 , 01), // Jan 2023 &#128467
-        exparation: "No exparation",
-        organisation: "Udemy",
         link: "https://www.udemy.com/certificate/UC-263fb597-b901-496f-8bd3-98f0d7221e00/"
       },
       {
-        title: "Build a Backend REST API with Python & Django - Beginer",
+        title: "Udemy | Build a Backend REST API with Python & Django - Beginer",
         id: "UC-492497c6-798a-457e-bd62-694a298ecad9",
         issue: new Date(2021 , 11), // Nov 2021 &#128467
-        exparation: "No exparation",
-        organisation: "Udemy",
         link: "https://www.udemy.com/certificate/UC-492497c6-798a-457e-bd62-694a298ecad9/"
       },
       {
-        title: "REST APIs with Flask and Python",
+        title: "Udemy | REST APIs with Flask and Python",
         id: "UC-b2cb7ac9-fc95-4ebe-a59e-dae991700d2f",
         issue: new Date(2020 , 10), // Nov 2020 &#128467
-        exparation: "No exparation",
-        organisation: "Udemy",
-        link: "www.udemy.com/certificate/UC-b2cb7ac9-fc95-4ebe-a59e-dae991700d2f"
+        link: "https://www.udemy.com/certificate/UC-b2cb7ac9-fc95-4ebe-a59e-dae991700d2f"
       },
       {
-        title: "Bootcamp Algorithms and Data Structures",
+        title: "Udemy | Bootcamp Algorithms and Data Structures",
         id: "UC-e14bd676-2213-4bab-8630-dc32837fe6e2",
         issue: new Date(2020 , 8), // Sep 2020 &#128467
-        exparation: "No exparation",
-        organisation: "Udemy",
-        link: "www.udemy.com/certificate/UC-e14bd676-2213-4bab-8630-dc32837fe6e2"
+        link: "https://www.udemy.com/certificate/UC-e14bd676-2213-4bab-8630-dc32837fe6e2"
       },
       {
-        title: "Angular Complete Guide",
+        title: "Udemy | Angular Complete Guide",
         id: "UC-b25860d0-d5c3-49f9-8271-865f0b9f95fb",
         issue: new Date(2020 , 5), // Jun 2020 &#128467
-        exparation: "No exparation",
-        organisation: "Udemy",
-        link: "www.udemy.com/certificate/UC-b25860d0-d5c3-49f9-8271-865f0b9f95fb"
+        link: "https://www.udemy.com/certificate/UC-b25860d0-d5c3-49f9-8271-865f0b9f95fb"
       }
     ];
   }

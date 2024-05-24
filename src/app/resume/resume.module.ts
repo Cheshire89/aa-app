@@ -9,6 +9,8 @@ import { IntroSkillScramblerComponent } from './resume-intro/intro-skill-scrambl
 import { LayoutModule } from '../layout/layout.module';
 import { ResumeIndexComponent } from './resume-index/resume-index.component';
 import { ResumeFooterComponent } from './resume-footer/resume-footer.component';
+import { SharedModule } from '../shared/shared.module';
+import { ResumeWorkComponent } from './resume-work/resume-work.component';
 
 @NgModule({
   declarations: [
@@ -16,9 +18,10 @@ import { ResumeFooterComponent } from './resume-footer/resume-footer.component';
     ResumeContactComponent,
     ResumeAboutComponent,
     ResumeIntroComponent,
+    ResumeWorkComponent,
     IntroSkillScramblerComponent,
     ResumeFooterComponent,
   ],
-  imports: [CommonModule, LayoutModule, HttpClientModule],
+  imports: [CommonModule, LayoutModule, HttpClientModule, SharedModule],
 })
 export class ResumeModule {}

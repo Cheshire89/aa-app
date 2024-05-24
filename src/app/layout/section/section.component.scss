@@ -1,5 +1,19 @@
 @import '../../../styles/vars';
 $pad: 2%;
+:host {
+  display: block;
+  position: relative;
+  .content {
+    display: flex;
+    justify-content: center;
+  }
+
+  canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
 .section {
   justify-items: center;
   position: relative;
@@ -8,11 +22,15 @@ $pad: 2%;
   min-height: 100vh;
   font-size: 2em;
   z-index: 2;
+
   // border-top: 1px dotted red;
   &__container {
     padding-top: 80px;
     position: relative;
     min-height: 100vh;
+
+    position: relative;
+    min-width: 865px;
   }
 
   &.intro {
@@ -25,4 +43,8 @@ $pad: 2%;
       min-height: 0px;
     }
   }
+}
+
+.about .content {
+  background-color: var(--theme-bg-code);
 }
