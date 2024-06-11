@@ -5,6 +5,7 @@ export interface ProjectImage {
 
 export interface Project {
   title: string;
+  link: string;
   images: ProjectImage[];
 }
 

@@ -1,12 +1,16 @@
 <section class="work">
-  <div class="work__company" *ngFor="let company of projects_alt">
+  <div class="work__company" *ngFor="let company of projects">
     <h3>{{ company.name }}</h3>
     <div class="work__project" *ngFor="let project of company.projects">
       <div class="work__project-title">
         <p>{{ project.title }}</p>
       </div>
       <div class="work__project-detail-wrapper">
-        <div class="work__project-detail" *ngFor="let image of project.images; index as i">
+        <div
+          class="work__project-detail"
+          (click)="onViewProject(project)"
+          *ngFor="let image of project.images; index as i"
+        >
           <img [src]="'assets/projects/' + image.source" [alt]="image.title" />
           <div class="work__copy">
             <small>{{ i < 10 ? '0' + i : i }}</small>

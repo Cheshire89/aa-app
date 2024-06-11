@@ -1,6 +1,6 @@
-import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef } from '@angular/core';
 import VanillaTilt from 'vanilla-tilt';
-import { Company } from './resume-work.model';
+import { Company, Project } from './resume-work.model';
 
 @Component({
   selector: 'app-resume-work',
@@ -8,18 +8,14 @@ import { Company } from './resume-work.model';
   styleUrl: './resume-work.component.scss',
 })
 export class ResumeWorkComponent implements AfterViewInit {
-  projects = new Array(10).fill({
-    source: 'https://placehold.co/410x230',
-    title: 'Segnificantly Longer Title to See',
-  });
-
-  projects_alt: Company[] = [
+  projects: Company[] = [
     {
       name: 'Sinch',
       stack: 'Reactjs',
       projects: [
         {
           title: 'Sinch Sip',
+          link: 'https://www.sinch.com/products/voice/sip-trunking/',
           images: [
             {
               title: 'Dashboard',
@@ -39,6 +35,7 @@ export class ResumeWorkComponent implements AfterViewInit {
       projects: [
         {
           title: 'Astro UXDS',
+          link: 'https://www.rocketcom.com/portfolio/astro-ux-design-system/',
           images: [
             {
               title: 'Welcome',
@@ -52,6 +49,7 @@ export class ResumeWorkComponent implements AfterViewInit {
         },
         {
           title: 'Space ACME',
+          link: 'https://www.rocketcom.com/portfolio/space-acme/',
           images: [
             {
               title: 'Dashboard',
@@ -67,6 +65,7 @@ export class ResumeWorkComponent implements AfterViewInit {
       projects: [
         {
           title: 'Client Dashboard',
+          link: 'https://spectrum.net/',
           images: [
             {
               title: 'Home',
@@ -85,7 +84,10 @@ export class ResumeWorkComponent implements AfterViewInit {
   constructor(private ele: ElementRef) {}
 
   ngAfterViewInit(): void {
-    // console.log('elements', this.ele.nativeElement.querySelectorAll('.work__project'));
     VanillaTilt.init(this.ele.nativeElement.querySelectorAll('.work__project-detail'), { max: 25, speed: 400 });
+  }
+
+  onViewProject(project: Project) {
+    window.open(project.link, '_blank');
   }
 }
