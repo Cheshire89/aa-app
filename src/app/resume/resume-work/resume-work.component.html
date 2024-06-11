@@ -1,5 +1,5 @@
 <section class="work">
-  <div class="work__company" *ngFor="let company of projects">
+  <div class="work__company" *ngFor="let company of projects$ | async">
     <h3>{{ company.name }}</h3>
     <div class="work__project" *ngFor="let project of company.projects">
       <div class="work__project-title">

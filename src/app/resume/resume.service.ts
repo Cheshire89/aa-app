@@ -126,21 +126,6 @@ export class ResumeService {
     return type;
   }
 
-  private setDots(item: { type: string; str: string }): { type: string; str: string } {
-    if (!item) {
-      item = {
-        type: 'dot',
-        str: ' ',
-      };
-    } else {
-      if (item.str === ' ') {
-        item.str = '·';
-      }
-      item.str += '·';
-    }
-    return item;
-  }
-
   isText(str: string, arr: string[]): boolean {
     const textRegex = /^[.,;{}[\]()]+$/g;
     if (textRegex.test(str)) {

@@ -72,7 +72,5 @@ export class CursorComponent implements OnInit, AfterViewInit {
     this.cursor = this.ele.nativeElement.children[0];
     this.cursorOutline = this.ele.nativeElement.children[1];
     this.links = document.querySelectorAll('a');
-
-    console.log('links', document.querySelectorAll('a'));
   }
 }

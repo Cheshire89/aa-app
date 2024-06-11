@@ -22,25 +22,15 @@ export class IntroSkillScramblerComponent implements OnInit {
         }
       }, 3000);
     }, 3000);
-
-    // this._dataService.getEducation().subscribe((res: any) => console.log('education', res));
-    // this._dataService.getJobs().subscribe((res: any) => console.log('jobs', res));
-    // this._dataService.getSkills().subscribe((res: any) => console.log('skills', res));
   }
 
   private async onScramble() {
     this.animationFinished = true;
-    // // safeguard agains loop running out of scope caused by UTF range being randomized
-    // let keepgoing = true;
-    // setTimeout(() => (keepgoing = false), 3500);
 
     this.nextNoun = this.getNextNoun();
     const len = this.nextNoun.length > this.noun.length ? this.nextNoun : this.noun;
 
     for (let i = 0; i < len.length; i++) {
-      // if (!keepgoing) {
-      //   break;
-      // }
       let finished = false;
       const range: { start: number; target: number } = {
         start: this.getCharCode(this.noun, i),
