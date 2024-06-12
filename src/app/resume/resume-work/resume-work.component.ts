@@ -2,7 +2,7 @@ import { AfterViewInit, Component, ElementRef } from '@angular/core';
 import VanillaTilt from 'vanilla-tilt';
 import { Company, Project } from './resume-work.model';
 import { Observable } from 'rxjs';
-import { ResumeWorkService } from './resume-work.service';
+import { EnvironmentService } from '@shared/services/environment/environment.service';
 
 @Component({
   selector: 'app-resume-work',
@@ -12,12 +12,13 @@ import { ResumeWorkService } from './resume-work.service';
 export class ResumeWorkComponent implements AfterViewInit {
   projects$: Observable<Company[]>;
 
-  constructor(private ele: ElementRef, private _resumeWorkService: ResumeWorkService) {
-    this.projects$ = this._resumeWorkService.get();
+  constructor(private ele: ElementRef, private _env: EnvironmentService) {
+    this.projects$ = this._env.getFile('projects.json');
   }
 
   ngAfterViewInit(): void {
-    VanillaTilt.init(this.ele.nativeElement.querySelectorAll('.work__project-detail'), { max: 25, speed: 400 });
+    const ele = this.ele.nativeElement.querySelectorAll('.work__project-detail');
+    VanillaTilt.init(ele, { max: 25, speed: 400 });
   }
 
   onViewProject(project: Project) {
