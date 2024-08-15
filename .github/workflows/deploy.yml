@@ -36,7 +36,7 @@ jobs:
           SOURCE_DIR: 'dist/aa-personal' # Path to your built Angular app
 
       - name: Invalidate CloudFront (Optional)
-        uses: awact/cloudfront-invalidate-action@v1
+        uses: chetan/invalidate-cloudfront-action@v2.4
         with:
           distribution-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
           paths: '/*'
