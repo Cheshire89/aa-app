@@ -1,6 +1,7 @@
 [
   {
     "name": "Sinch",
+    "slug": "sinch",
     "stack": "Reactjs",
     "projects": [
       {
@@ -21,6 +22,7 @@
   },
   {
     "name": "Rocket Communications",
+    "slug": "rocket-communications",
     "stack": "Reactjs, Python, Storybook",
     "projects": [
       {
@@ -51,6 +53,7 @@
   },
   {
     "name": "Spectrum",
+    "slug": "spectrum",
     "stack": "Angular, Android, IOS",
     "projects": [
       {

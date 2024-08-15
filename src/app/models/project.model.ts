@@ -8,9 +8,3 @@ export interface Project {
   link: string;
   images: ProjectImage[];
 }
-
-export interface Company {
-  name: string;
-  stack: string;
-  projects: Project[];
-}

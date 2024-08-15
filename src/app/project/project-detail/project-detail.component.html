@@ -1,0 +1,5 @@
+<p>project-detail works!</p>
+<div *ngIf="company$ | async as company">
+    {{ company.name }}
+    {{ company.projects | json }}
+</div>

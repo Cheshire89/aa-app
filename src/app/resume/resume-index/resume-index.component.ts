@@ -1,13 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
 
 @Component({
-  selector: 'app-resume-index',
-  templateUrl: './resume-index.component.html',
-  styleUrls: ['./resume-index.component.scss'],
+    selector: 'app-resume-index',
+    templateUrl: './resume-index.component.html',
+    styleUrls: ['./resume-index.component.scss'],
 })
 export class ResumeIndexComponent implements OnInit {
-  isStartingBlock = true;
-  constructor() {}
+    isStartingBlock = true
 
-  ngOnInit() {}
+    constructor() {}
+
+    ngOnInit() {}
 }
