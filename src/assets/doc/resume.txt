@@ -1,5 +1,5 @@
 
-export class AleksandrAntonov implements onDeveloper {
+export class AleksandrAntonov implements Developer {
   name: string;
   email: string;
 
@@ -28,7 +28,7 @@ export class AleksandrAntonov implements onDeveloper {
         location: "Denver&#x2c; CO (Remote)"
       },
       {
-        company: "Voyant Communications",
+        company: "Sinch | Voyant Communications",
         title: "Software Engineer",
         start: new Date(2018, 01), // Feb 2018 - Jan 2021 &#128467
         end: new Date(2021, 0),
@@ -53,24 +53,29 @@ export class AleksandrAntonov implements onDeveloper {
 
   skills(){
     return {
-      cicd: ["Teamcity"],
-      javascript: {
-        Angular: ["v1", "v13+", "NgRx", 
+      FrontEnd: {
+        Angular: ["v1", "v16+", "NgRx",
           "Rxjs", "Apollo", "Ionic", "Capacitor"],
-        Reactjs: ["Redux"],
-        Nodejs: ["Express", "Mongodb"],
-        general: ["Ajax", "JSON", "Store"],
+        Reactjs: ["Redux", "Material UI"],
+        WebComponents: ["StencilJs", "LitElement", "Storybook"],
         mobile: ["IOS (Swift)", "Androdid (Java)"]
       },
-      python: ["Django"],
-      php: ["Laravel"],
+      BackEnd: {
+        Nodejs: ["Express", "Mongodb"],
+        Python: ["Django"]
+      },
+      DevOps: {
+        AWS: ["EC2", "S3", "Route 53", "Cloud Front"]
+      },
+      general: ["Ajax", "JSON"],
+      cicd: ["Teamcity", "Github Actions", "Docker"],
       agile: ["Jira", "Trello", "SCRUM"],
-      other: ["GraphQl", "MySql"],
+      db: ["GraphQl", "MySql", "PostgreSQL"],
       AI: ['chatGpt']
     };
   }
 
-  education(){
+  certificates(){
     return [
       {
         title: "Udemy | Pyton Django - Complete Course",
@@ -81,8 +86,14 @@ export class AleksandrAntonov implements onDeveloper {
       {
         title: "Udemy | Build a Backend REST API with Python & Django - Beginer",
         id: "UC-492497c6-798a-457e-bd62-694a298ecad9",
-        issue: new Date(2021 , 11), // Nov 2021 &#128467
+        issue: new Date(2020 , 11), // Nov 2020 &#128467
         link: "https://www.udemy.com/certificate/UC-492497c6-798a-457e-bd62-694a298ecad9/"
+      },
+      {
+        title: "Udemy | Build a Backend REST API with Python & Django - Advanced",
+        id: "UC-e4355797-abb1-41d4-aed1-f27796dede3b",
+        issue: new Date(2020 , 12), // Dec 2020 &#128467
+        link: "https://www.udemy.com/certificate/UC-e4355797-abb1-41d4-aed1-f27796dede3b/"
       },
       {
         title: "Udemy | REST APIs with Flask and Python",
