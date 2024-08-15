@@ -1,15 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core'
 
 @Component({
-  selector: 'app-resume-contact',
-  templateUrl: './resume-contact.component.html',
-  styleUrls: ['./resume-contact.component.scss']
+    selector: 'app-resume-contact',
+    templateUrl: './resume-contact.component.html',
+    styleUrls: ['./resume-contact.component.scss'],
 })
-export class ResumeContactComponent implements OnInit {
-  currentYear = new Date().getFullYear();
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class ResumeContactComponent {
+    currentYear = new Date().getFullYear()
 }

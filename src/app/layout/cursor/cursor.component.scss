@@ -1,55 +1,53 @@
 @mixin set-circle-size($size) {
-  width: $size;
-  height: $size;
+    width: $size;
+    height: $size;
 }
 
 @mixin init-circle($size) {
-  position: absolute;
-  @include set-circle-size(($size));
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transform-origin: 100% 100%;
-  pointer-events: none;
-  z-index: 1002;
+    position: absolute;
+    @include set-circle-size(($size));
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: 100% 100%;
+    pointer-events: none;
+    z-index: 1002;
 }
 
 .cursor {
-  @include init-circle(0.35rem);
-  background-color: var(--theme-white);
-  pointer-events: none;
-  opacity: 1;
-
-  &--down {
-    @include set-circle-size(0.55rem);
-  }
-
-  &--link {
-    content: 'U+2B08'
-  }
-
-  &--hide {
-    opacity: 0;
-  }
-
-  &__outline {
-    @include init-circle(1.5rem);
-    border: 1px solid var(--theme-white);
-    transition: all 0.1s linear;
+    @include init-circle(0.35rem);
+    background-color: var(--theme-white);
+    pointer-events: none;
+    opacity: 1;
 
     &--down {
-      @include set-circle-size(0.65rem);
-    }
-
-    &--grow {
-      transform: scale(2);
-      z-index: 1001;
-      backdrop-filter: hue-rotate(90deg) saturate(500%);
+        @include set-circle-size(0.55rem);
     }
 
     &--link {
-      opacity: 0;
+        content: 'U+2B08';
     }
-  }
 
-  
+    &--hide {
+        opacity: 0;
+    }
+
+    &__outline {
+        @include init-circle(1.5rem);
+        border: 1px solid var(--theme-white);
+        transition: all 0.1s linear;
+
+        &--down {
+            @include set-circle-size(0.65rem);
+        }
+
+        &--grow {
+            transform: scale(2);
+            z-index: 1001;
+            backdrop-filter: hue-rotate(90deg) saturate(500%);
+        }
+
+        &--link {
+            opacity: 0;
+        }
+    }
 }

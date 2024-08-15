@@ -1,12 +1,21 @@
 <section [attr.class]="title + ' section'">
-  <div class="content">
-    <div class="section__container" [ngClass]="{ 'py-0': startingblock }">
-      <div class="content__timeline" [ngClass]="{ 'content__timeline--alt': !startingblock }">
-        <span class="content__bullet" [ngClass]="{ 'content__bullet--alt': !startingblock }">
-          <div class="content__section-label" [attr.data-label]="sectionTitle"></div>
-        </span>
-      </div>
-      <ng-content></ng-content>
+    <div class="content">
+        <div class="section__container" [ngClass]="{ 'py-0': startingblock }">
+            <div
+                class="content__timeline"
+                [ngClass]="{ 'content__timeline--alt': !startingblock }"
+            >
+                <span
+                    class="content__bullet"
+                    [ngClass]="{ 'content__bullet--alt': !startingblock }"
+                >
+                    <div
+                        class="content__section-label"
+                        [attr.data-label]="sectionTitle"
+                    ></div>
+                </span>
+            </div>
+            <ng-content></ng-content>
+        </div>
     </div>
-  </div>
 </section>
