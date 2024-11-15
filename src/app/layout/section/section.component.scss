@@ -1,8 +1,10 @@
 @import '../../../styles/vars';
 $pad: 2%;
+
 :host {
   display: block;
   position: relative;
+
   .content {
     display: flex;
     justify-content: center;
@@ -14,6 +16,7 @@ $pad: 2%;
     height: 100%;
   }
 }
+
 .section {
   justify-items: center;
   position: relative;
@@ -39,12 +42,13 @@ $pad: 2%;
 
   &.contact {
     min-height: 0px;
+
     .section__container {
       min-height: 0px;
     }
   }
 }
 
-.about .content {
+.about {
   background-color: var(--theme-bg-code);
 }
